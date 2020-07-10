@@ -33,8 +33,7 @@
 /*===Циклы====*/
 
 
-
-let num = 34;
+// let num = 34;
 
 // while(num<50) {
 //     console.log(num);
@@ -47,7 +46,31 @@ let num = 34;
 // }
 // while(num<50);
 
-for(let i = 1; i < 9; i++) {
-    console.log(num);
-    num++;
+// for(let i = 1; i < 9; i++) {
+//     console.log(num);
+//     num++;
+// }
+/*==== ФУНКЦИИ =====*/
+
+function showFirstMassege(text) {
+    console.log(text);
 }
+showFirstMassege("Hello world");
+
+function calc(a, b) {
+    return(a + b);
+    console.log("unreachable cod");
+}
+console.log(calc(5, 9));
+
+// Function expression
+
+let loger = function() {
+console.log('OOOO')
+};
+loger();
+
+// Стрелочная функция
+
+const arrow = (a, b) => { a + b };
+

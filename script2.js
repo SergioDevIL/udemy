@@ -59,18 +59,41 @@ showFirstMassege("Hello world");
 
 function calc(a, b) {
     return(a + b);
-    console.log("unreachable cod");
 }
 console.log(calc(5, 9));
 
 // Function expression
 
 let loger = function() {
-console.log('OOOO')
+console.log('OOOO');
 };
 loger();
 
 // Стрелочная функция
 
-const arrow = (a, b) => { a + b };
+// const arrow = (a, b) => { 
+//     return (a + b); 
+// };
 
+/*===Методы и свойтсва строк и чисел===*/
+// const del = 'resssr';
+
+// console.log(del.length);
+// console.log(del.toUpperCase());
+
+// const obst = 'Gemuse';
+
+// console.log(obst.indexOf('e')); /* индекс по-порядку, может использоваться для поиска и есть ли кусок строки с коде*/
+
+const slice = "Я хочу быть крутым программистом";
+console.log(slice.slice(-13)); //вырезает необходимый кусок строки
+console.log(slice.substring(5)); //делает тоже самое но не принимает минус значение
+console.log(slice.substr(3, 6)); //6 это количество знаков которые нужно обрезать
+
+const num = 122.33333; 
+console.log(Math.round(num)); // округление к ближайшему целому числу
+
+const size = '12.22px';
+console.log(parseInt(size)); // вытягивает целую цифру и превращает в целое число
+
+const pop = console.log(parseFloat(size));// вытягивает десятичную дробь полностью

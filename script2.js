@@ -123,25 +123,25 @@ loger();
 
 //Оъекты - структура которая может сохранять в себе любые типы данных в формате КЛЮЧ-ЗНАЧЕНИЕ
 
-const options = {
-    name: 'test',
-    width: 1024,
-    heigth: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function() { //созданный метод, который будет работать внутри объекта
-        console.log("Test");
-    }
-};
-options.makeTest(); // запускаем созданный метод - круглые скобки указывают на запуск метода или функции
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     heigth: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+//     makeTest: function() { //созданный метод, который будет работать внутри объекта
+//         console.log("Test");
+//     }
+// };
+// options.makeTest(); // запускаем созданный метод - круглые скобки указывают на запуск метода или функции
 
 
 // Деструктуризация объекта
 
-const {border, bg} = options.colors;
-console.log(bg);
+// const {border, bg} = options.colors;
+// console.log(bg);
 
 
 // console.log(Object.keys(options).length);
@@ -166,3 +166,31 @@ console.log(bg);
 //     }
 // }
 // console.log(counter);
+
+// Массивы и псевдомассивы
+
+const arr = [1, 2, 3, 4, 6, 8];
+// arr[99] = 0; // добавление элемента в массив с индексом 99 !!!
+// console.log(arr.length);
+// arr.pop(); // метод удаляет последний элемент массива
+// arr.push(10); // метод добавляет элемент в конец массива
+
+arr.forEach(function(i, item, arr) { // метод для перебора массива - применяет функцию к каждому элементу
+     console.log(`${item} : ${i} внутри массива ${arr}`);
+});
+// методы для трансформации массивов arr.map, arr.filter, arr.reduce, arr.every/some
+
+// for (let i = 0; i < arr.length; i++) { // цикл для перебора массива
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr){ //метод для перебора массива, второй способ
+//     console.log(value);
+// }
+console.log(arr);
+// length массива это индекс последнего елемента плюс 1 (ответ - какое соотношение length и индексов элемента массива)
+
+const str = prompt('Напишите ваши любимые страны','');
+const list = str.split(", "); // метод split трансформирует строку в массив
+list.sort(); // метод сортировки (по умолчанию в алфавитном порядке) работает со строками
+console.log(list.join("; ")); // метод join выводит массив в строку

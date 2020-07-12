@@ -85,15 +85,84 @@ loger();
 
 // console.log(obst.indexOf('e')); /* индекс по-порядку, может использоваться для поиска и есть ли кусок строки с коде*/
 
-const slice = "Я хочу быть крутым программистом";
-console.log(slice.slice(-13)); //вырезает необходимый кусок строки
-console.log(slice.substring(5)); //делает тоже самое но не принимает минус значение
-console.log(slice.substr(3, 6)); //6 это количество знаков которые нужно обрезать
+// const slice = "Я хочу быть крутым программистом";
+// console.log(slice.slice(-13)); //вырезает необходимый кусок строки
+// console.log(slice.substring(5)); //делает тоже самое но не принимает минус значение
+// console.log(slice.substr(3, 6)); //6 это количество знаков которые нужно обрезать
 
-const num = 122.33333; 
-console.log(Math.round(num)); // округление к ближайшему целому числу
+// const num = 122.33333; 
+// console.log(Math.round(num)); // округление к ближайшему целому числу
 
-const size = '12.22px';
-console.log(parseInt(size)); // вытягивает целую цифру и превращает в целое число
+// const size = '12.22px';
+// console.log(parseInt(size)); // вытягивает целую цифру и превращает в целое число
 
-const pop = console.log(parseFloat(size));// вытягивает десятичную дробь полностью
+// const pop = console.log(parseFloat(size));// вытягивает десятичную дробь полностью
+
+// function first() {
+//     setTimeout(function() {
+//         console.log(1);
+//     }, 500);
+// }
+
+// function second () {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS(kol, callback) {
+// console.log(`я учу: ${kol}`);
+// callback();
+// }
+
+// function done() {
+//     console.log('Очень медленно начинаю понемногу понимать что происходит');
+// }
+// learnJS('My life', done);
+
+//Оъекты - структура которая может сохранять в себе любые типы данных в формате КЛЮЧ-ЗНАЧЕНИЕ
+
+const options = {
+    name: 'test',
+    width: 1024,
+    heigth: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() { //созданный метод, который будет работать внутри объекта
+        console.log("Test");
+    }
+};
+options.makeTest(); // запускаем созданный метод - круглые скобки указывают на запуск метода или функции
+
+
+// Деструктуризация объекта
+
+const {border, bg} = options.colors;
+console.log(bg);
+
+
+// console.log(Object.keys(options).length);
+
+
+// console.log(options.name);
+
+// delete options.name;
+
+// console.log(options);
+
+// let counter = 0; 
+// for (let key in options) { //key это маркер слово для всех ключей  в объектах (for in - для перебора объекта)
+//     if(typeof(options[key]) === 'object'){
+//        for (let i in options[key]) {
+//            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+//            counter++;
+//        }
+//     } else {
+//       console.log(`Свойство ${key} имеет значение ${options[key]}`);  
+//       counter++;
+//     }
+// }
+// console.log(counter);
